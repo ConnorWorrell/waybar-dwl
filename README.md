@@ -1,3 +1,15 @@
-# waybar-dwl
+# waybar-dwl.sh
 
-A script for feeding dwl tags, layout and title to waybar
+waybar-dwl.sh is a script that generates [dwl](https://github.com/djpohly/dwl) tag, layout and title information in a format usable by [waybar](https://github.com/Alexays/Waybar)
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+waybar-dwl.sh is based heavily upon this script by user "novakane" (Hugo Machet) used to do the same for yambar
+[dwl-tags.sh](https://codeberg.org/novakane/yambar/src/branch/master/examples/scripts/dwl-tags.sh)
+
+
+REQUIREMENTS:
+ - inotifywait ( 'inotify-tools' on arch )
+ - Launch dwl with `dwl > ~.cache/dwltags` or change $fname
+ - Modify "tags" array if you use fewer than nine tags
+ - Modify "name" array with your choice of labels
+ - See waybar-dwl.sh comments for usage details

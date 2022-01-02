@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 #
 # wayar-dwl.sh - display dwl tags, layout, and active title
+#   Based heavily upon this script by user "novakane" (Hugo Machet) used to do the same for yambar
+#   https://codeberg.org/novakane/yambar/src/branch/master/examples/scripts/dwl-tags.sh
 #
 # USAGE: waybar-dwl.sh MONITOR COMPONENT
 #        "COMPONENT" is an integer representing a dwl tag OR "layout" OR "title"
@@ -157,9 +159,9 @@ while true; do
     layout="$(echo "${output}" | grep layout | cut -d ' ' -f 3- )"
 
     # Get the tag bit mask as a decimal
-    activetags="$(echo "${output}" | grep tags | awk '{print $3}')"
+    activetags="$(echo "${output}"   | grep tags | awk '{print $3}')"
     selectedtags="$(echo "${output}" | grep tags | awk '{print $4}')"
-    urgenttags="$(echo "${output}" | grep tags | awk '{print $6}')"
+    urgenttags="$(echo "${output}"   | grep tags | awk '{print $6}')"
 
     _cycle
 
