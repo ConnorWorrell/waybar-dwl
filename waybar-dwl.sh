@@ -147,9 +147,6 @@ _cycle() {
     esac
 }
 
-# Call the function here so the tags are displayed at dwl launch
-_cycle
-
 while true; do
 
     [[ ! -f "${fname}" ]] && printf -- '%s\n' \
