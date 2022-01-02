@@ -156,15 +156,15 @@ while true; do
 				    "You need to redirect dwl stdout to ~/.cache/dwltags" >&2
 
     # Get info from the file
-    output="$(grep "${monitor}" "${fname}" | tail -n4)"
-    title="$(echo "${output}" | grep title | cut -d ' ' -f 3-  | sed s/\"/“/g )" # Replace quotation marks to prevent waybar crash
+    output="$(grep  "${monitor}" "${fname}" | tail -n4)"
+    title="$(echo   "${output}" | grep '^[[:graph:]]* title'  | cut -d ' ' -f 3-  | sed s/\"/“/g )" # Replace quotes - prevent waybar crash
+    layout="$(echo  "${output}" | grep '^[[:graph:]]* layout' | cut -d ' ' -f 3- )"
     #selmon="$(echo "${output}" | grep 'selmon')"
-    layout="$(echo "${output}" | grep layout | cut -d ' ' -f 3- )"
 
     # Get the tag bit mask as a decimal
-    activetags="$(echo "${output}"   | grep '[[:graph:]]* tags' | awk '{print $3}')"
-    selectedtags="$(echo "${output}" | grep '[[:graph:]]* tags' | awk '{print $4}')"
-    urgenttags="$(echo "${output}"   | grep '[[:graph:]]* tags' | awk '{print $6}')"
+    activetags="$(echo "${output}"   | grep '^[[:graph:]]* tags' | awk '{print $3}')"
+    selectedtags="$(echo "${output}" | grep '^[[:graph:]]* tags' | awk '{print $4}')"
+    urgenttags="$(echo "${output}"   | grep '^[[:graph:]]* tags' | awk '{print $6}')"
 
     _cycle
 
