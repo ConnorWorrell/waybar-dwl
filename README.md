@@ -1,10 +1,10 @@
 # waybar-dwl.sh
 
-waybar-dwl.sh is a script that generates [dwl](https://github.com/djpohly/dwl) tag, layout and title information in a format usable by [waybar](https://github.com/Alexays/Waybar)
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+waybar-dwl.sh generates [dwl](https://github.com/djpohly/dwl) tag, layout and title info for [waybar](https://github.com/Alexays/Waybar)
+----------------------------------------------------------------------------------------------------------------------------------------
 
-waybar-dwl.sh is based heavily upon this script by user "novakane" (Hugo Machet) used to do the same for yambar
-[dwl-tags.sh](https://codeberg.org/novakane/yambar/src/branch/master/examples/scripts/dwl-tags.sh)
+waybar-dwl.sh is based heavily upon [dwl-tags.sh](https://codeberg.org/novakane/yambar/src/branch/master/examples/scripts/dwl-tags.sh) by user "novakane" (Hugo Machet) that does same job for [yambar](https://codeberg.org/dnkl/yambar)
+
 
 
 REQUIREMENTS:
