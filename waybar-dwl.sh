@@ -159,9 +159,9 @@ while true; do
     layout="$(echo "${output}" | grep layout | cut -d ' ' -f 3- )"
 
     # Get the tag bit mask as a decimal
-    activetags="$(echo "${output}"   | grep tags | awk '{print $3}')"
-    selectedtags="$(echo "${output}" | grep tags | awk '{print $4}')"
-    urgenttags="$(echo "${output}"   | grep tags | awk '{print $6}')"
+    activetags="$(echo "${output}"   | grep '[[:graph:]]* tags' | awk '{print $3}')"
+    selectedtags="$(echo "${output}" | grep '[[:graph:]]* tags' | awk '{print $4}')"
+    urgenttags="$(echo "${output}"   | grep '[[:graph:]]* tags' | awk '{print $6}')"
 
     _cycle
 
