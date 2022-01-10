@@ -13,3 +13,4 @@ REQUIREMENTS:
  - Modify "tags" array if you use fewer than nine tags
  - Modify "name" array with your choice of labels
  - See waybar-dwl.sh comments for usage details
+ - To get tag layout to update when clients start or stop on non-displayed tags, apply [this pull request](https://github.com/djpohly/dwl/pull/178) to dwl (not commited as of 2022-01-09)
