@@ -148,7 +148,7 @@ _cycle() {
     esac
 }
 
-while true; do
+while [[ -n "$(pgrep waybar)" ]] ; do
 
     [[ ! -f "${fname}" ]] && printf -- '%s\n' \
 				    "You need to redirect dwl stdout to ~/.cache/dwltags" >&2
@@ -166,10 +166,10 @@ while true; do
 
     _cycle
 
-    inotifywait -qq --event modify "${fname}"
+    # 60-second timeout keeps this from becoming a zombified process when waybar is no longer running
+    inotifywait -t 60 -qq --event modify "${fname}"
 
 done
 
-unset -v output title layout activetags selectedtags
-unset -v tags name
+unset -v activetags layout name output selectedtags tags title
 
