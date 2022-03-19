@@ -121,6 +121,7 @@ component="${2}"
 
 _cycle() {
     case "${component}" in
+	# I only use six tags; if you use more, expand this array appropriately
 	[012345])
 	    this_tag="${component}"
 	    unset this_status
@@ -154,7 +155,7 @@ while [[ -n "$(pgrep waybar)" ]] ; do
 				    "You need to redirect dwl stdout to ~/.cache/dwltags" >&2
 
     # Get info from the file
-    output="$(grep  "${monitor}" "${fname}" | tail -n4)"
+    output="$(grep  "${monitor}" "${fname}" | tail -n6)"
     title="$(echo   "${output}" | grep '^[[:graph:]]* title'  | cut -d ' ' -f 3-  | sed s/\"/“/g )" # Replace quotes - prevent waybar crash
     layout="$(echo  "${output}" | grep '^[[:graph:]]* layout' | cut -d ' ' -f 3- )"
     #selmon="$(echo "${output}" | grep 'selmon')"
