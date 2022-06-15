@@ -120,9 +120,8 @@ monitor="${1}"
 component="${2}"
 
 _cycle() {
-    case "${component}" in
-	# I only use six tags; if you use more, expand this array appropriately
-	[012345])
+	case "${component}" in
+	[012345678])
 	    this_tag="${component}"
 	    unset this_status
 	    mask=$((1<<this_tag))
