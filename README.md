@@ -1,5 +1,7 @@
 # waybar-dwl.sh
 
+![waybar-dwl.sh screenshot](/resources/screenshot.png "waybar-dwl.sh in action")
+
 waybar-dwl.sh generates [dwl](https://github.com/djpohly/dwl) tag, layout and title info for [waybar](https://github.com/Alexays/Waybar)
 ----------------------------------------------------------------------------------------------------------------------------------------
 
