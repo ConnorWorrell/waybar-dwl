@@ -73,6 +73,7 @@
 #   "custom/dwl_layout": {
 #     "exec": "/path/to/waybar-dwl.sh '' layout",
 #     "format": "{}",
+#     "escape": true,
 #     "return-type": "json"
 #   },
 #   "custom/dwl_title": {
