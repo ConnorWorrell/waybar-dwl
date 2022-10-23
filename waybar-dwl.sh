@@ -115,7 +115,7 @@ declare -a tags name
 readonly fname="$HOME"/.cache/dwltags
 
 tags=( "1" "2" "3" "4" "5" "6" "7" "8" "9" )
-name=( "" "" "" "" "" "" "7" "8" "9" ) # Array of labels for tags
+name=( "1" "2" "3" "4" "5" "6" "7" "8" "9" ) # Array of labels for tags
 
 monitor="${1}"
 component="${2}"
@@ -134,7 +134,7 @@ _cycle() {
 	    if [[ "${this_status}" ]]; then
 		printf -- '{"text":" %s ","class":[%s]}\n' "${name[this_tag]}" "${this_status}"
 	    else
-		printf -- '{"text":" %s "}\n' "${name[this_tag]}"
+		printf -- '{"text":""}\n'
 	    fi
 	    ;;
 	layout)
